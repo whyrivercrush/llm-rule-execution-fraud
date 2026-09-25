@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or these logs, please cite the manuscript below."
+title: "Prompted Rule Execution Adds Nothing over a Rule Engine on Machine-Checkable Rules"
+abstract: >-
+  We test, on a controlled tabular fraud benchmark, whether supplying a large
+  language model with an explicit natural-language rulebook improves on
+  executing that same rulebook deterministically. In a specification-matched
+  comparison on the primary model the design excludes any LLM advantage above
+  half a percentage point, and a rule-level decomposition shows that one of the
+  four rules carries essentially all of the discriminative signal. When a model
+  is required to execute one machine-checkable rule and ignore every other
+  signal, it reproduces the engine's verdict on all 400 instances exactly.
+authors:
+  - family-names: "Lei"
+    given-names: "Yuyang"
+    affiliation: "School of Computer Science, Guangzhou College of Applied Science and Technology (Zhaoqing Campus), Dinghu District, Zhaoqing, Guangdong, China"
+    email: "yuyeung.lei@gmail.com"
+type: software
+license: MIT
+repository-code: "https://github.com/whyrivercrush/llm-rule-execution-fraud"
+keywords:
+  - large language models
+  - rule-based reasoning
+  - fraud detection
+  - empirical evaluation
+  - prompt engineering

@@ -1,0 +1,15 @@
+{
+  "input_path": "C:/Users/Niconiconi/Documents/Codex/2026-09-03/llm-mrml-ccf-c-sci-bridging/data/test/test_cards_400.json",
+  "log_dir": "logs",
+  "base_url": "https://open.bigmodel.cn/api/paas/v4/",
+  "api_key": "REPLACE_WITH_ZCODE_OR_GLM_API_KEY",
+  "model": "REPLACE_WITH_ZCODE_OR_GLM_MODEL",
+  "temperature": 0.0,
+  "max_tokens": 1600,
+  "timeout_seconds": 120,
+  "retries": 3,
+  "concurrency": 3,
+  "sample_concurrency": 4,
+  "json_mode": true,
+  "conditions": "A,B,C,D"
+}

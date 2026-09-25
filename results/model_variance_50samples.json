@@ -1,0 +1,4525 @@
+{
+  "generated_at": "2026-09-13T07:31:37+00:00",
+  "model": "glm-4.5-air",
+  "base_url": "https://open.bigmodel.cn/api/paas/v4/",
+  "temperature": 0.0,
+  "json_mode": true,
+  "repeats": 5,
+  "subset": {
+    "seed": 200,
+    "n_pos": 25,
+    "n_neg": 25,
+    "n": 50,
+    "transaction_ids": [
+      "3460869",
+      "3174373",
+      "3514638",
+      "3167393",
+      "3249980",
+      "3452149",
+      "3505571",
+      "3511153",
+      "3094192",
+      "3137308",
+      "3089168",
+      "3281741",
+      "3388143",
+      "3248511",
+      "3304989",
+      "3298823",
+      "3189467",
+      "3427797",
+      "3372608",
+      "3465604",
+      "3187458",
+      "3570801",
+      "3302385",
+      "3054814",
+      "3519396",
+      "3548008",
+      "3517836",
+      "3008154",
+      "3421830",
+      "3557680",
+      "2999996",
+      "3554545",
+      "3427123",
+      "3240392",
+      "3282106",
+      "3347186",
+      "3160016",
+      "3391394",
+      "3299188",
+      "3063386",
+      "3084623",
+      "3488007",
+      "3375957",
+      "3463590",
+      "3171889",
+      "2999118",
+      "3341710",
+      "3464291",
+      "3321722",
+      "3078471"
+    ]
+  },
+  "expected_calls": 2500,
+  "actual_calls": 2583,
+  "aborted": null,
+  "per_repeat_status": {
+    "repeat_1": {
+      "success": 200
+    },
+    "repeat_2": {
+      "success": 197,
+      "api_error": 3
+    },
+    "repeat_3": {
+      "success": 200
+    },
+    "repeat_4": {
+      "success": 199,
+      "api_error": 1
+    },
+    "repeat_5": {
+      "success": 199,
+      "api_error": 1
+    }
+  },
+  "conditions": {
+    "A": {
+      "n_samples": 50,
+      "n_samples_with_repeats": 50,
+      "mean_agreement_rate": 0.904,
+      "min_agreement_rate": 0.6,
+      "n_samples_agreement_below_1": 18,
+      "mean_confidence_variance": 0.0065639999999999995,
+      "mean_confidence_std": 0.06662051029999168,
+      "samples": {
+        "3460869": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.45,
+            0.6,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.5700000000000001,
+          "confidence_variance": 0.0035999999999999986,
+          "confidence_std": 0.059999999999999984
+        },
+        "3174373": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.6,
+            0.6,
+            0.4,
+            0.3
+          ],
+          "confidence_mean": 0.45999999999999996,
+          "confidence_variance": 0.014399999999999998,
+          "confidence_std": 0.11999999999999998
+        },
+        "3514638": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.3,
+            0.2,
+            0.6,
+            0.3
+          ],
+          "confidence_mean": 0.36,
+          "confidence_variance": 0.0184,
+          "confidence_std": 0.13564659966250536
+        },
+        "3167393": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.6,
+            0.65,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.62,
+          "confidence_variance": 0.000600000000000001,
+          "confidence_std": 0.024494897427831803
+        },
+        "3249980": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.65,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.63,
+          "confidence_variance": 0.000600000000000001,
+          "confidence_std": 0.024494897427831803
+        },
+        "3452149": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.4,
+            0.65,
+            0.6,
+            0.65,
+            0.45
+          ],
+          "confidence_mean": 0.55,
+          "confidence_variance": 0.011,
+          "confidence_std": 0.10488088481701516
+        },
+        "3505571": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.6,
+            0.4,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.52,
+          "confidence_variance": 0.009599999999999996,
+          "confidence_std": 0.0979795897113271
+        },
+        "3511153": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.3,
+            0.4,
+            0.3,
+            0.6,
+            0.3
+          ],
+          "confidence_mean": 0.38,
+          "confidence_variance": 0.0136,
+          "confidence_std": 0.116619037896906
+        },
+        "3094192": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.45,
+            0.65,
+            0.3,
+            0.6
+          ],
+          "confidence_mean": 0.52,
+          "confidence_variance": 0.0166,
+          "confidence_std": 0.12884098726725127
+        },
+        "3137308": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3089168": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.6,
+            0.3,
+            0.3,
+            0.4
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.011999999999999999,
+          "confidence_std": 0.10954451150103321
+        },
+        "3281741": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.3,
+            0.6,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.42000000000000004,
+          "confidence_variance": 0.0096,
+          "confidence_std": 0.09797958971132711
+        },
+        "3388143": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.65,
+            0.65,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.65,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3248511": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.65,
+            0.65,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.65,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3304989": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.6,
+            0.3,
+            0.3,
+            0.3,
+            0.6
+          ],
+          "confidence_mean": 0.42000000000000004,
+          "confidence_variance": 0.021599999999999998,
+          "confidence_std": 0.14696938456699069
+        },
+        "3298823": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.6,
+            0.6,
+            0.75,
+            0.65
+          ],
+          "confidence_mean": 0.65,
+          "confidence_variance": 0.003000000000000001,
+          "confidence_std": 0.05477225575051662
+        },
+        "3189467": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3427797": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "confidence_mean": 0.37,
+          "confidence_variance": 0.019600000000000003,
+          "confidence_std": 0.14
+        },
+        "3372608": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.3,
+            0.3,
+            0.6,
+            0.4
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.011999999999999999,
+          "confidence_std": 0.10954451150103321
+        },
+        "3465604": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.6,
+            0.6,
+            0.65,
+            0.6
+          ],
+          "confidence_mean": 0.61,
+          "confidence_variance": 0.0004000000000000007,
+          "confidence_std": 0.020000000000000018
+        },
+        "3187458": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.55,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.43000000000000005,
+          "confidence_variance": 0.003600000000000001,
+          "confidence_std": 0.06000000000000001
+        },
+        "3570801": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.38,
+          "confidence_variance": 0.0016000000000000012,
+          "confidence_std": 0.040000000000000015
+        },
+        "3302385": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.6,
+            0.3,
+            0.6,
+            0.45
+          ],
+          "confidence_mean": 0.47000000000000003,
+          "confidence_variance": 0.013599999999999998,
+          "confidence_std": 0.116619037896906
+        },
+        "3054814": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.6,
+            0.6,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.61,
+          "confidence_variance": 0.0004000000000000007,
+          "confidence_std": 0.020000000000000018
+        },
+        "3519396": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.4,
+            0.3
+          ],
+          "confidence_mean": 0.38,
+          "confidence_variance": 0.0016000000000000012,
+          "confidence_std": 0.040000000000000015
+        },
+        "3548008": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.2,
+            0.6,
+            0.6,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.44000000000000006,
+          "confidence_variance": 0.022399999999999996,
+          "confidence_std": 0.14966629547095764
+        },
+        "3517836": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.65,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.61,
+          "confidence_variance": 0.0004000000000000007,
+          "confidence_std": 0.020000000000000018
+        },
+        "3008154": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.6,
+            0.3,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.42000000000000004,
+          "confidence_variance": 0.0096,
+          "confidence_std": 0.09797958971132711
+        },
+        "3421830": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.6,
+            0.4,
+            0.4,
+            0.4,
+            0.6
+          ],
+          "confidence_mean": 0.48,
+          "confidence_variance": 0.009599999999999996,
+          "confidence_std": 0.0979795897113271
+        },
+        "3557680": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.4,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.5599999999999999,
+          "confidence_variance": 0.006399999999999997,
+          "confidence_std": 0.07999999999999999
+        },
+        "2999996": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.4,
+            0.3,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.42000000000000004,
+          "confidence_variance": 0.0096,
+          "confidence_std": 0.09797958971132711
+        },
+        "3554545": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3427123": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.4,
+            0.45
+          ],
+          "confidence_mean": 0.41000000000000003,
+          "confidence_variance": 0.0003999999999999998,
+          "confidence_std": 0.019999999999999997
+        },
+        "3240392": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.6,
+            0.4,
+            0.25,
+            0.4
+          ],
+          "confidence_mean": 0.41,
+          "confidence_variance": 0.012399999999999998,
+          "confidence_std": 0.11135528725660043
+        },
+        "3282106": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.75,
+            0.65,
+            0.75,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.6900000000000001,
+          "confidence_variance": 0.002399999999999999,
+          "confidence_std": 0.04898979485566355
+        },
+        "3347186": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.6,
+            0.6,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.61,
+          "confidence_variance": 0.0004000000000000007,
+          "confidence_std": 0.020000000000000018
+        },
+        "3160016": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.6,
+            0.35,
+            0.6,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.47000000000000003,
+          "confidence_variance": 0.011599999999999997,
+          "confidence_std": 0.10770329614269007
+        },
+        "3391394": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.4,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.58,
+          "confidence_variance": 0.0086,
+          "confidence_std": 0.09273618495495703
+        },
+        "3299188": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "confidence_mean": 0.32,
+          "confidence_variance": 0.0016000000000000012,
+          "confidence_std": 0.040000000000000015
+        },
+        "3063386": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.6,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3084623": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.2,
+            0.2,
+            0.3
+          ],
+          "confidence_mean": 0.3,
+          "confidence_variance": 0.008,
+          "confidence_std": 0.08944271909999159
+        },
+        "3488007": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.6,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.44000000000000006,
+          "confidence_variance": 0.006399999999999997,
+          "confidence_std": 0.07999999999999999
+        },
+        "3375957": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.2,
+            0.35,
+            0.4
+          ],
+          "confidence_mean": 0.31,
+          "confidence_variance": 0.0044,
+          "confidence_std": 0.066332495807108
+        },
+        "3463590": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.62,
+          "confidence_variance": 0.000600000000000001,
+          "confidence_std": 0.024494897427831803
+        },
+        "3171889": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.6,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.44000000000000006,
+          "confidence_variance": 0.006399999999999997,
+          "confidence_std": 0.07999999999999999
+        },
+        "2999118": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.4,
+            0.6,
+            0.4,
+            0.3,
+            0.4
+          ],
+          "confidence_mean": 0.42000000000000004,
+          "confidence_variance": 0.0096,
+          "confidence_std": 0.09797958971132711
+        },
+        "3341710": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.6,
+            0.4
+          ],
+          "confidence_mean": 0.44000000000000006,
+          "confidence_variance": 0.006399999999999997,
+          "confidence_std": 0.07999999999999999
+        },
+        "3464291": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3321722": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.4,
+            0.3,
+            0.4,
+            0.45
+          ],
+          "confidence_mean": 0.37,
+          "confidence_variance": 0.0036000000000000016,
+          "confidence_std": 0.06000000000000001
+        },
+        "3078471": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        }
+      }
+    },
+    "B": {
+      "n_samples": 50,
+      "n_samples_with_repeats": 50,
+      "mean_agreement_rate": 0.8009999999999999,
+      "min_agreement_rate": 0.5,
+      "n_samples_agreement_below_1": 35,
+      "mean_confidence_variance": 0.0063938749999999985,
+      "mean_confidence_std": 0.07310569852425386,
+      "samples": {
+        "3460869": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.6,
+            0.75,
+            0.7,
+            0.65
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0026,
+          "confidence_std": 0.05099019513592785
+        },
+        "3174373": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.4,
+            0.65,
+            0.4,
+            0.6,
+            0.45
+          ],
+          "confidence_mean": 0.5,
+          "confidence_variance": 0.010999999999999998,
+          "confidence_std": 0.10488088481701514
+        },
+        "3514638": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.4,
+            0.3,
+            0.6,
+            0.35,
+            0.65
+          ],
+          "confidence_mean": 0.45999999999999996,
+          "confidence_variance": 0.0194,
+          "confidence_std": 0.1392838827718412
+        },
+        "3167393": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.6,
+            0.65,
+            0.85,
+            0.85
+          ],
+          "confidence_mean": 0.74,
+          "confidence_variance": 0.010399999999999998,
+          "confidence_std": 0.1019803902718557
+        },
+        "3249980": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.7,
+            0.7,
+            0.75,
+            0.7,
+            0.6
+          ],
+          "confidence_mean": 0.69,
+          "confidence_variance": 0.0024000000000000002,
+          "confidence_std": 0.048989794855663564
+        },
+        "3452149": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.65,
+            0.85,
+            0.7,
+            0.75
+          ],
+          "confidence_mean": 0.72,
+          "confidence_variance": 0.005599999999999998,
+          "confidence_std": 0.07483314773547882
+        },
+        "3505571": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.45,
+            0.7,
+            0.4,
+            0.65,
+            0.6
+          ],
+          "confidence_mean": 0.5599999999999999,
+          "confidence_variance": 0.013399999999999995,
+          "confidence_std": 0.11575836902790224
+        },
+        "3511153": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.45,
+            0.65,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.63,
+          "confidence_variance": 0.0096,
+          "confidence_std": 0.09797958971132713
+        },
+        "3094192": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.45,
+            0.4,
+            0.6,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.54,
+          "confidence_variance": 0.009399999999999999,
+          "confidence_std": 0.09695359714832658
+        },
+        "3137308": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.85,
+            0.65,
+            0.7,
+            0.65,
+            0.75
+          ],
+          "confidence_mean": 0.72,
+          "confidence_variance": 0.005599999999999998,
+          "confidence_std": 0.07483314773547882
+        },
+        "3089168": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 4,
+          "labels": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.75,
+          "confidences": [
+            0.6,
+            0.65,
+            0.75,
+            0.7
+          ],
+          "confidence_mean": 0.675,
+          "confidence_variance": 0.003125,
+          "confidence_std": 0.05590169943749474
+        },
+        "3281741": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.65,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.64,
+          "confidence_variance": 0.0004000000000000007,
+          "confidence_std": 0.020000000000000018
+        },
+        "3388143": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.7,
+            0.75,
+            0.7,
+            0.75,
+            0.7
+          ],
+          "confidence_mean": 0.72,
+          "confidence_variance": 0.000600000000000001,
+          "confidence_std": 0.024494897427831803
+        },
+        "3248511": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.85,
+            0.65,
+            0.75,
+            0.75
+          ],
+          "confidence_mean": 0.77,
+          "confidence_variance": 0.005599999999999997,
+          "confidence_std": 0.0748331477354788
+        },
+        "3304989": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.65,
+            0.75,
+            0.65,
+            0.7
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0026,
+          "confidence_std": 0.05099019513592785
+        },
+        "3298823": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.9,
+            0.85,
+            0.85,
+            0.85,
+            0.85
+          ],
+          "confidence_mean": 0.86,
+          "confidence_variance": 0.0004000000000000007,
+          "confidence_std": 0.020000000000000018
+        },
+        "3189467": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.7,
+            0.65,
+            0.75,
+            0.6,
+            0.8
+          ],
+          "confidence_mean": 0.7,
+          "confidence_variance": 0.005000000000000002,
+          "confidence_std": 0.07071067811865477
+        },
+        "3427797": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.4,
+            0.65,
+            0.45,
+            0.4
+          ],
+          "confidence_mean": 0.51,
+          "confidence_variance": 0.0134,
+          "confidence_std": 0.11575836902790225
+        },
+        "3372608": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 4,
+          "labels": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "agreement_rate": 0.5,
+          "confidences": [
+            0.6,
+            0.65,
+            0.75,
+            0.65
+          ],
+          "confidence_mean": 0.6625,
+          "confidence_variance": 0.0029687500000000005,
+          "confidence_std": 0.05448623679425842
+        },
+        "3465604": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.75,
+            0.6,
+            0.85,
+            0.75
+          ],
+          "confidence_mean": 0.74,
+          "confidence_variance": 0.0064,
+          "confidence_std": 0.08
+        },
+        "3187458": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.65,
+            0.75,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0015999999999999992,
+          "confidence_std": 0.039999999999999994
+        },
+        "3570801": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.6,
+            0.65,
+            0.65,
+            0.85
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0086,
+          "confidence_std": 0.09273618495495703
+        },
+        "3302385": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.4,
+            0.4,
+            0.6
+          ],
+          "confidence_mean": 0.52,
+          "confidence_variance": 0.009599999999999996,
+          "confidence_std": 0.0979795897113271
+        },
+        "3054814": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.75,
+            0.75,
+            0.75,
+            0.75
+          ],
+          "confidence_mean": 0.73,
+          "confidence_variance": 0.0015999999999999992,
+          "confidence_std": 0.039999999999999994
+        },
+        "3519396": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.65,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.63,
+          "confidence_variance": 0.000600000000000001,
+          "confidence_std": 0.024494897427831803
+        },
+        "3548008": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.7,
+            0.6,
+            0.6,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.64,
+          "confidence_variance": 0.0013999999999999998,
+          "confidence_std": 0.03741657386773941
+        },
+        "3517836": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.75,
+            0.65,
+            0.75,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.6900000000000001,
+          "confidence_variance": 0.002399999999999999,
+          "confidence_std": 0.04898979485566355
+        },
+        "3008154": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.65,
+            0.75,
+            0.75,
+            0.85
+          ],
+          "confidence_mean": 0.73,
+          "confidence_variance": 0.005599999999999997,
+          "confidence_std": 0.0748331477354788
+        },
+        "3421830": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.75,
+            0.75,
+            0.65,
+            0.75
+          ],
+          "confidence_mean": 0.71,
+          "confidence_variance": 0.002399999999999999,
+          "confidence_std": 0.04898979485566355
+        },
+        "3557680": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.75,
+            0.65,
+            0.6,
+            0.75
+          ],
+          "confidence_mean": 0.7,
+          "confidence_variance": 0.004,
+          "confidence_std": 0.0632455532033676
+        },
+        "2999996": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.7,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.63,
+          "confidence_variance": 0.0015999999999999996,
+          "confidence_std": 0.039999999999999994
+        },
+        "3554545": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.65,
+            0.65,
+            0.4,
+            0.65
+          ],
+          "confidence_mean": 0.6,
+          "confidence_variance": 0.01,
+          "confidence_std": 0.1
+        },
+        "3427123": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.65,
+            0.4,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.5900000000000001,
+          "confidence_variance": 0.0094,
+          "confidence_std": 0.09695359714832658
+        },
+        "3240392": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.4,
+            0.6,
+            0.6,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.58,
+          "confidence_variance": 0.0086,
+          "confidence_std": 0.09273618495495703
+        },
+        "3282106": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.75,
+            0.65,
+            0.6,
+            0.85,
+            0.65
+          ],
+          "confidence_mean": 0.7,
+          "confidence_variance": 0.007999999999999998,
+          "confidence_std": 0.08944271909999157
+        },
+        "3347186": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.75,
+            0.65,
+            0.75,
+            0.75,
+            0.65
+          ],
+          "confidence_mean": 0.71,
+          "confidence_variance": 0.002399999999999999,
+          "confidence_std": 0.04898979485566355
+        },
+        "3160016": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.7,
+            0.75,
+            0.65,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.6799999999999999,
+          "confidence_variance": 0.0015999999999999988,
+          "confidence_std": 0.03999999999999999
+        },
+        "3391394": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.65,
+            0.65,
+            0.75,
+            0.85
+          ],
+          "confidence_mean": 0.75,
+          "confidence_variance": 0.007999999999999997,
+          "confidence_std": 0.08944271909999157
+        },
+        "3299188": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.45,
+            0.6,
+            0.4,
+            0.4,
+            0.6
+          ],
+          "confidence_mean": 0.49000000000000005,
+          "confidence_variance": 0.008399999999999996,
+          "confidence_std": 0.09165151389911678
+        },
+        "3063386": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.75,
+            0.75,
+            0.85,
+            0.85,
+            0.7
+          ],
+          "confidence_mean": 0.78,
+          "confidence_variance": 0.0036000000000000003,
+          "confidence_std": 0.060000000000000005
+        },
+        "3084623": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.7,
+            0.45,
+            0.75,
+            0.75,
+            0.7
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.012599999999999998,
+          "confidence_std": 0.11224972160321824
+        },
+        "3488007": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.75,
+            0.4,
+            0.65,
+            0.65,
+            0.6
+          ],
+          "confidence_mean": 0.61,
+          "confidence_variance": 0.013399999999999999,
+          "confidence_std": 0.11575836902790225
+        },
+        "3375957": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.45,
+            0.4,
+            0.6
+          ],
+          "confidence_mean": 0.41,
+          "confidence_variance": 0.0124,
+          "confidence_std": 0.11135528725660043
+        },
+        "3463590": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.65,
+            0.7,
+            0.65,
+            0.85
+          ],
+          "confidence_mean": 0.74,
+          "confidence_variance": 0.008399999999999998,
+          "confidence_std": 0.09165151389911678
+        },
+        "3171889": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.45,
+            0.6,
+            0.6,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.58,
+          "confidence_variance": 0.0046,
+          "confidence_std": 0.06782329983125268
+        },
+        "2999118": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.7,
+            0.65,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.65,
+          "confidence_variance": 0.0009999999999999996,
+          "confidence_std": 0.031622776601683784
+        },
+        "3341710": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.65,
+            0.4,
+            0.45,
+            0.4
+          ],
+          "confidence_mean": 0.5,
+          "confidence_variance": 0.010999999999999998,
+          "confidence_std": 0.10488088481701514
+        },
+        "3464291": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.65,
+            0.65,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.65,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3321722": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.45,
+            0.65,
+            0.6,
+            0.75,
+            0.85
+          ],
+          "confidence_mean": 0.6599999999999999,
+          "confidence_variance": 0.018399999999999996,
+          "confidence_std": 0.13564659966250536
+        },
+        "3078471": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.65,
+            0.85,
+            0.65,
+            0.6
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0086,
+          "confidence_std": 0.09273618495495703
+        }
+      }
+    },
+    "C": {
+      "n_samples": 50,
+      "n_samples_with_repeats": 50,
+      "mean_agreement_rate": 0.924,
+      "min_agreement_rate": 0.6,
+      "n_samples_agreement_below_1": 14,
+      "mean_confidence_variance": 0.011899999999999999,
+      "mean_confidence_std": 0.08209417476440467,
+      "samples": {
+        "3460869": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.6,
+            0.65,
+            0.65,
+            0.65,
+            0.6
+          ],
+          "confidence_mean": 0.63,
+          "confidence_variance": 0.000600000000000001,
+          "confidence_std": 0.024494897427831803
+        },
+        "3174373": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.1,
+            0.2,
+            0.6,
+            0.2,
+            0.2
+          ],
+          "confidence_mean": 0.26,
+          "confidence_variance": 0.030399999999999996,
+          "confidence_std": 0.17435595774162693
+        },
+        "3514638": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.2,
+            0.3,
+            0.2,
+            0.3,
+            0.3
+          ],
+          "confidence_mean": 0.26,
+          "confidence_variance": 0.002399999999999999,
+          "confidence_std": 0.04898979485566355
+        },
+        "3167393": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.61,
+          "confidence_variance": 0.0004000000000000007,
+          "confidence_std": 0.020000000000000018
+        },
+        "3249980": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.65,
+            0.4,
+            0.4,
+            0.45
+          ],
+          "confidence_mean": 0.4600000000000001,
+          "confidence_variance": 0.0094,
+          "confidence_std": 0.09695359714832658
+        },
+        "3452149": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.2,
+            0.4,
+            0.4,
+            0.3
+          ],
+          "confidence_mean": 0.34,
+          "confidence_variance": 0.006400000000000001,
+          "confidence_std": 0.08
+        },
+        "3505571": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.6,
+            0.4,
+            0.3,
+            0.45,
+            0.45
+          ],
+          "confidence_mean": 0.44000000000000006,
+          "confidence_variance": 0.009399999999999999,
+          "confidence_std": 0.09695359714832658
+        },
+        "3511153": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.3,
+            0.35,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.37,
+          "confidence_variance": 0.0016000000000000014,
+          "confidence_std": 0.040000000000000015
+        },
+        "3094192": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.3,
+            0.6,
+            0.45,
+            0.6
+          ],
+          "confidence_mean": 0.51,
+          "confidence_variance": 0.014399999999999998,
+          "confidence_std": 0.12
+        },
+        "3137308": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.3,
+            0.2,
+            0.4,
+            0.35
+          ],
+          "confidence_mean": 0.32999999999999996,
+          "confidence_variance": 0.005600000000000001,
+          "confidence_std": 0.07483314773547883
+        },
+        "3089168": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.2,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "confidence_mean": 0.27999999999999997,
+          "confidence_variance": 0.0015999999999999992,
+          "confidence_std": 0.039999999999999994
+        },
+        "3281741": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.6,
+            0.65,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.62,
+          "confidence_variance": 0.000600000000000001,
+          "confidence_std": 0.024494897427831803
+        },
+        "3388143": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.65,
+            0.75,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0015999999999999992,
+          "confidence_std": 0.039999999999999994
+        },
+        "3248511": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.4,
+            0.65,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.45,
+          "confidence_variance": 0.01,
+          "confidence_std": 0.1
+        },
+        "3304989": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.15
+          ],
+          "confidence_mean": 0.75,
+          "confidence_variance": 0.09000000000000001,
+          "confidence_std": 0.3
+        },
+        "3298823": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.45,
+            0.2,
+            0.6,
+            0.3,
+            0.45
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.019,
+          "confidence_std": 0.13784048752090222
+        },
+        "3189467": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.65,
+            0.65,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.65,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3427797": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.1,
+            0.2,
+            0.2,
+            0.95,
+            0.2
+          ],
+          "confidence_mean": 0.32999999999999996,
+          "confidence_variance": 0.09759999999999999,
+          "confidence_std": 0.31240998703626616
+        },
+        "3372608": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.4,
+            0.35,
+            0.4,
+            0.65
+          ],
+          "confidence_mean": 0.48,
+          "confidence_variance": 0.0146,
+          "confidence_std": 0.12083045973594572
+        },
+        "3465604": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.4,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3187458": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.2,
+            0.2,
+            0.1
+          ],
+          "confidence_mean": 0.22000000000000003,
+          "confidence_variance": 0.005599999999999999,
+          "confidence_std": 0.07483314773547882
+        },
+        "3570801": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.85,
+            0.85,
+            0.75,
+            0.85
+          ],
+          "confidence_mean": 0.8300000000000001,
+          "confidence_variance": 0.0015999999999999992,
+          "confidence_std": 0.039999999999999994
+        },
+        "3302385": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.1,
+            0.2,
+            0.9,
+            0.9,
+            0.2
+          ],
+          "confidence_mean": 0.4600000000000001,
+          "confidence_variance": 0.13040000000000002,
+          "confidence_std": 0.36110940170535577
+        },
+        "3054814": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.65,
+            0.7,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.5599999999999999,
+          "confidence_variance": 0.017399999999999995,
+          "confidence_std": 0.13190905958272917
+        },
+        "3519396": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.65,
+            0.75,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.6599999999999999,
+          "confidence_variance": 0.0024000000000000002,
+          "confidence_std": 0.048989794855663564
+        },
+        "3548008": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.4
+          ],
+          "confidence_mean": 0.32,
+          "confidence_variance": 0.0016000000000000012,
+          "confidence_std": 0.040000000000000015
+        },
+        "3517836": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.4,
+            0.3,
+            0.3
+          ],
+          "confidence_mean": 0.32,
+          "confidence_variance": 0.0016000000000000012,
+          "confidence_std": 0.040000000000000015
+        },
+        "3008154": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.2,
+            0.2,
+            0.2,
+            0.3,
+            0.3
+          ],
+          "confidence_mean": 0.24,
+          "confidence_variance": 0.002399999999999999,
+          "confidence_std": 0.04898979485566355
+        },
+        "3421830": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.3,
+            0.65,
+            0.6,
+            0.4
+          ],
+          "confidence_mean": 0.52,
+          "confidence_variance": 0.0206,
+          "confidence_std": 0.14352700094407325
+        },
+        "3557680": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.6,
+            0.6,
+            0.45,
+            0.4,
+            0.6
+          ],
+          "confidence_mean": 0.53,
+          "confidence_variance": 0.0075999999999999965,
+          "confidence_std": 0.08717797887081345
+        },
+        "2999996": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.3,
+            0.4,
+            0.4,
+            0.3
+          ],
+          "confidence_mean": 0.36,
+          "confidence_variance": 0.0024000000000000015,
+          "confidence_std": 0.04898979485566358
+        },
+        "3554545": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.7,
+            0.65,
+            0.75,
+            0.65,
+            0.6
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0026,
+          "confidence_std": 0.05099019513592785
+        },
+        "3427123": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.6,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3240392": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.6,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.44000000000000006,
+          "confidence_variance": 0.006399999999999997,
+          "confidence_std": 0.07999999999999999
+        },
+        "3282106": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.7,
+            0.6,
+            0.65,
+            0.6
+          ],
+          "confidence_mean": 0.63,
+          "confidence_variance": 0.0015999999999999996,
+          "confidence_std": 0.039999999999999994
+        },
+        "3347186": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.7,
+            0.85,
+            0.7,
+            0.75,
+            0.65
+          ],
+          "confidence_mean": 0.73,
+          "confidence_variance": 0.004599999999999999,
+          "confidence_std": 0.06782329983125268
+        },
+        "3160016": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.4,
+            0.2,
+            0.3
+          ],
+          "confidence_mean": 0.3,
+          "confidence_variance": 0.004,
+          "confidence_std": 0.0632455532033676
+        },
+        "3391394": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.45,
+            0.4,
+            0.45
+          ],
+          "confidence_mean": 0.42000000000000004,
+          "confidence_variance": 0.0005999999999999997,
+          "confidence_std": 0.024494897427831775
+        },
+        "3299188": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.2,
+            0.15,
+            0.3,
+            0.1,
+            0.1
+          ],
+          "confidence_mean": 0.16999999999999998,
+          "confidence_variance": 0.005599999999999999,
+          "confidence_std": 0.07483314773547882
+        },
+        "3063386": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.75,
+            0.65,
+            0.6,
+            0.75,
+            0.65
+          ],
+          "confidence_mean": 0.6799999999999999,
+          "confidence_variance": 0.0036000000000000003,
+          "confidence_std": 0.060000000000000005
+        },
+        "3084623": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.1,
+            0.3,
+            0.2,
+            0.1
+          ],
+          "confidence_mean": 0.2,
+          "confidence_variance": 0.007999999999999998,
+          "confidence_std": 0.08944271909999157
+        },
+        "3488007": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.4,
+            0.2,
+            0.3
+          ],
+          "confidence_mean": 0.34,
+          "confidence_variance": 0.006400000000000001,
+          "confidence_std": 0.08
+        },
+        "3375957": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.2,
+            0.2,
+            0.15
+          ],
+          "confidence_mean": 0.22999999999999998,
+          "confidence_variance": 0.0035999999999999995,
+          "confidence_std": 0.05999999999999999
+        },
+        "3463590": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.4,
+            0.35,
+            0.3,
+            0.6,
+            0.4
+          ],
+          "confidence_mean": 0.41,
+          "confidence_variance": 0.0104,
+          "confidence_std": 0.1019803902718557
+        },
+        "3171889": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.3,
+            0.4,
+            0.45,
+            0.3
+          ],
+          "confidence_mean": 0.37,
+          "confidence_variance": 0.0036000000000000016,
+          "confidence_std": 0.06000000000000001
+        },
+        "2999118": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.4,
+            0.3,
+            0.4,
+            0.3
+          ],
+          "confidence_mean": 0.36,
+          "confidence_variance": 0.0024000000000000015,
+          "confidence_std": 0.04898979485566358
+        },
+        "3341710": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.1,
+            0.35,
+            0.3,
+            0.2,
+            0.1
+          ],
+          "confidence_mean": 0.21000000000000002,
+          "confidence_variance": 0.010399999999999998,
+          "confidence_std": 0.10198039027185568
+        },
+        "3464291": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.4,
+            0.3,
+            0.3
+          ],
+          "confidence_mean": 0.32,
+          "confidence_variance": 0.0016000000000000012,
+          "confidence_std": 0.040000000000000015
+        },
+        "3321722": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.85,
+            0.75,
+            0.65,
+            0.85
+          ],
+          "confidence_mean": 0.79,
+          "confidence_variance": 0.006399999999999997,
+          "confidence_std": 0.07999999999999999
+        },
+        "3078471": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.3,
+            0.4,
+            0.2
+          ],
+          "confidence_mean": 0.3,
+          "confidence_variance": 0.004,
+          "confidence_std": 0.0632455532033676
+        }
+      }
+    },
+    "D": {
+      "n_samples": 50,
+      "n_samples_with_repeats": 50,
+      "mean_agreement_rate": 0.84,
+      "min_agreement_rate": 0.6,
+      "n_samples_agreement_below_1": 30,
+      "mean_confidence_variance": 0.011105954999999999,
+      "mean_confidence_std": 0.09126831668164996,
+      "samples": {
+        "3460869": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 4,
+          "labels": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.65,
+            0.75,
+            0.75
+          ],
+          "confidence_mean": 0.7,
+          "confidence_variance": 0.0024999999999999988,
+          "confidence_std": 0.04999999999999999
+        },
+        "3174373": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.9,
+            0.3,
+            0.85,
+            0.3
+          ],
+          "confidence_mean": 0.53,
+          "confidence_variance": 0.0796,
+          "confidence_std": 0.2821347195933177
+        },
+        "3514638": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 4,
+          "labels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.7,
+            0.4,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.475,
+          "confidence_variance": 0.016874999999999994,
+          "confidence_std": 0.12990381056766576
+        },
+        "3167393": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.65,
+            0.85,
+            0.7,
+            0.6
+          ],
+          "confidence_mean": 0.71,
+          "confidence_variance": 0.0073999999999999995,
+          "confidence_std": 0.08602325267042626
+        },
+        "3249980": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.45,
+            0.6,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.5900000000000001,
+          "confidence_variance": 0.0054,
+          "confidence_std": 0.07348469228349534
+        },
+        "3452149": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.75,
+            0.65,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.6599999999999999,
+          "confidence_variance": 0.0024000000000000002,
+          "confidence_std": 0.048989794855663564
+        },
+        "3505571": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.65,
+            0.4,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.58,
+          "confidence_variance": 0.0086,
+          "confidence_std": 0.09273618495495703
+        },
+        "3511153": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.4,
+            0.6,
+            0.45,
+            0.65
+          ],
+          "confidence_mean": 0.54,
+          "confidence_variance": 0.009399999999999999,
+          "confidence_std": 0.09695359714832658
+        },
+        "3094192": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.4,
+            0.65,
+            0.75,
+            0.6
+          ],
+          "confidence_mean": 0.6,
+          "confidence_variance": 0.013,
+          "confidence_std": 0.11401754250991379
+        },
+        "3137308": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.7,
+            0.65,
+            0.65,
+            0.75
+          ],
+          "confidence_mean": 0.6799999999999999,
+          "confidence_variance": 0.0015999999999999988,
+          "confidence_std": 0.03999999999999999
+        },
+        "3089168": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.35,
+            0.3,
+            0.6,
+            0.3,
+            0.3
+          ],
+          "confidence_mean": 0.37,
+          "confidence_variance": 0.0136,
+          "confidence_std": 0.116619037896906
+        },
+        "3281741": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.75,
+            0.85,
+            0.75,
+            0.65
+          ],
+          "confidence_mean": 0.73,
+          "confidence_variance": 0.005599999999999997,
+          "confidence_std": 0.0748331477354788
+        },
+        "3388143": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.75,
+            0.75,
+            0.75,
+            0.75
+          ],
+          "confidence_mean": 0.73,
+          "confidence_variance": 0.0015999999999999992,
+          "confidence_std": 0.039999999999999994
+        },
+        "3248511": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.75,
+            0.75,
+            0.65,
+            0.6,
+            0.65
+          ],
+          "confidence_mean": 0.6799999999999999,
+          "confidence_variance": 0.0036000000000000003,
+          "confidence_std": 0.060000000000000005
+        },
+        "3304989": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.4,
+            0.6,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.5900000000000001,
+          "confidence_variance": 0.0094,
+          "confidence_std": 0.09695359714832658
+        },
+        "3298823": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.75,
+            0.75,
+            0.75,
+            0.75,
+            0.75
+          ],
+          "confidence_mean": 0.75,
+          "confidence_variance": 0.0,
+          "confidence_std": 0.0
+        },
+        "3189467": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.75,
+            0.75,
+            0.85,
+            0.85
+          ],
+          "confidence_mean": 0.76,
+          "confidence_variance": 0.0084,
+          "confidence_std": 0.0916515138991168
+        },
+        "3427797": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.6,
+            0.45,
+            0.6,
+            0.85
+          ],
+          "confidence_mean": 0.58,
+          "confidence_variance": 0.024599999999999993,
+          "confidence_std": 0.1568438714135812
+        },
+        "3372608": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.75
+          ],
+          "confidence_mean": 0.63,
+          "confidence_variance": 0.003600000000000001,
+          "confidence_std": 0.06000000000000001
+        },
+        "3465604": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.65,
+            0.75,
+            0.45,
+            0.75
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0136,
+          "confidence_std": 0.116619037896906
+        },
+        "3187458": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.45,
+            0.4,
+            0.3,
+            0.35
+          ],
+          "confidence_mean": 0.36,
+          "confidence_variance": 0.0034000000000000015,
+          "confidence_std": 0.058309518948453015
+        },
+        "3570801": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 4,
+          "labels": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.7,
+            0.85,
+            0.85,
+            0.85
+          ],
+          "confidence_mean": 0.8125,
+          "confidence_variance": 0.004218750000000001,
+          "confidence_std": 0.0649519052838329
+        },
+        "3302385": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.3,
+            0.3,
+            0.45,
+            0.9,
+            0.2
+          ],
+          "confidence_mean": 0.43,
+          "confidence_variance": 0.0616,
+          "confidence_std": 0.24819347291981714
+        },
+        "3054814": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.65,
+            0.65,
+            0.75,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.0015999999999999992,
+          "confidence_std": 0.039999999999999994
+        },
+        "3519396": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.85,
+            0.75,
+            0.85,
+            0.75
+          ],
+          "confidence_mean": 0.8099999999999999,
+          "confidence_variance": 0.002399999999999999,
+          "confidence_std": 0.04898979485566355
+        },
+        "3548008": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.7,
+            0.4,
+            0.6,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.5,
+          "confidence_variance": 0.015999999999999993,
+          "confidence_std": 0.12649110640673514
+        },
+        "3517836": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.75,
+            0.6,
+            0.6,
+            0.7
+          ],
+          "confidence_mean": 0.6599999999999999,
+          "confidence_variance": 0.0034000000000000002,
+          "confidence_std": 0.05830951894845301
+        },
+        "3008154": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.5,
+            0.65,
+            0.6,
+            0.65,
+            0.65
+          ],
+          "confidence_mean": 0.61,
+          "confidence_variance": 0.003400000000000001,
+          "confidence_std": 0.058309518948453015
+        },
+        "3421830": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.65,
+            0.6,
+            0.7,
+            0.6
+          ],
+          "confidence_mean": 0.6599999999999999,
+          "confidence_variance": 0.0034000000000000002,
+          "confidence_std": 0.05830951894845301
+        },
+        "3557680": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.65,
+            0.65,
+            0.7,
+            0.6,
+            0.4
+          ],
+          "confidence_mean": 0.6,
+          "confidence_variance": 0.010999999999999998,
+          "confidence_std": 0.10488088481701514
+        },
+        "2999996": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.4,
+            0.4,
+            0.65,
+            0.6,
+            0.4
+          ],
+          "confidence_mean": 0.49000000000000005,
+          "confidence_variance": 0.012399999999999998,
+          "confidence_std": 0.11135528725660043
+        },
+        "3554545": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.75,
+            0.85,
+            0.75,
+            0.75
+          ],
+          "confidence_mean": 0.79,
+          "confidence_variance": 0.002399999999999999,
+          "confidence_std": 0.04898979485566355
+        },
+        "3427123": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.65,
+            0.6,
+            0.65,
+            0.45
+          ],
+          "confidence_mean": 0.5900000000000001,
+          "confidence_variance": 0.0054,
+          "confidence_std": 0.07348469228349534
+        },
+        "3240392": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.4,
+            0.45,
+            0.6,
+            0.4,
+            0.4
+          ],
+          "confidence_mean": 0.45,
+          "confidence_variance": 0.0059999999999999975,
+          "confidence_std": 0.07745966692414832
+        },
+        "3282106": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.65,
+            0.75,
+            0.75,
+            0.85
+          ],
+          "confidence_mean": 0.75,
+          "confidence_variance": 0.003999999999999998,
+          "confidence_std": 0.06324555320336757
+        },
+        "3347186": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.75,
+            0.85,
+            0.75,
+            0.7,
+            0.85
+          ],
+          "confidence_mean": 0.78,
+          "confidence_variance": 0.0036000000000000003,
+          "confidence_std": 0.060000000000000005
+        },
+        "3160016": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.6,
+          "confidences": [
+            0.6,
+            0.65,
+            0.6,
+            0.65,
+            0.6
+          ],
+          "confidence_mean": 0.62,
+          "confidence_variance": 0.000600000000000001,
+          "confidence_std": 0.024494897427831803
+        },
+        "3391394": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.75,
+            0.65,
+            0.6,
+            0.6,
+            0.75
+          ],
+          "confidence_mean": 0.67,
+          "confidence_variance": 0.004600000000000001,
+          "confidence_std": 0.0678232998312527
+        },
+        "3299188": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.35,
+            0.3,
+            0.7,
+            0.9,
+            0.35
+          ],
+          "confidence_mean": 0.52,
+          "confidence_variance": 0.056600000000000004,
+          "confidence_std": 0.23790754506740638
+        },
+        "3063386": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.65,
+            0.65,
+            0.85,
+            0.85
+          ],
+          "confidence_mean": 0.77,
+          "confidence_variance": 0.009599999999999996,
+          "confidence_std": 0.0979795897113271
+        },
+        "3084623": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.6,
+            0.5,
+            0.3,
+            0.65
+          ],
+          "confidence_mean": 0.54,
+          "confidence_variance": 0.017400000000000002,
+          "confidence_std": 0.1319090595827292
+        },
+        "3488007": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.6,
+            0.4,
+            0.45,
+            0.6
+          ],
+          "confidence_mean": 0.54,
+          "confidence_variance": 0.009399999999999999,
+          "confidence_std": 0.09695359714832658
+        },
+        "3375957": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.35,
+            0.3,
+            0.3,
+            0.2,
+            0.6
+          ],
+          "confidence_mean": 0.35,
+          "confidence_variance": 0.018,
+          "confidence_std": 0.13416407864998736
+        },
+        "3463590": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.65,
+            0.85,
+            0.6,
+            0.75
+          ],
+          "confidence_mean": 0.7,
+          "confidence_variance": 0.007999999999999998,
+          "confidence_std": 0.08944271909999157
+        },
+        "3171889": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.6,
+            0.6,
+            0.7,
+            0.3
+          ],
+          "confidence_mean": 0.5599999999999999,
+          "confidence_variance": 0.018399999999999996,
+          "confidence_std": 0.13564659966250536
+        },
+        "2999118": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.45,
+            0.4,
+            0.6,
+            0.6,
+            0.4
+          ],
+          "confidence_mean": 0.49000000000000005,
+          "confidence_variance": 0.008399999999999996,
+          "confidence_std": 0.09165151389911678
+        },
+        "3341710": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.6,
+            0.4,
+            0.65,
+            0.6,
+            0.6
+          ],
+          "confidence_mean": 0.5700000000000001,
+          "confidence_variance": 0.007599999999999998,
+          "confidence_std": 0.08717797887081347
+        },
+        "3464291": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.65,
+            0.6,
+            0.6,
+            0.4
+          ],
+          "confidence_mean": 0.58,
+          "confidence_variance": 0.0086,
+          "confidence_std": 0.09273618495495703
+        },
+        "3321722": {
+          "ground_truth_label": 1,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "agreement_rate": 1.0,
+          "confidences": [
+            0.85,
+            0.88,
+            0.95,
+            0.85,
+            0.85
+          ],
+          "confidence_mean": 0.876,
+          "confidence_variance": 0.0015039999999999995,
+          "confidence_std": 0.03878143885933062
+        },
+        "3078471": {
+          "ground_truth_label": 0,
+          "n_valid_runs": 5,
+          "labels": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "agreement_rate": 0.8,
+          "confidences": [
+            0.65,
+            0.6,
+            0.4,
+            0.4,
+            0.6
+          ],
+          "confidence_mean": 0.53,
+          "confidence_variance": 0.011599999999999997,
+          "confidence_std": 0.10770329614269007
+        }
+      }
+    }
+  }
+}

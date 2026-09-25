@@ -1,0 +1,12 @@
+# Normalise line endings so the repository is byte-stable across platforms.
+* text=auto eol=lf
+
+# Data and log files must not be line-ending-converted: the manuscript claims
+# byte-identity of the archived artefacts.
+*.jsonl  -text
+*.json   -text
+
+# Binary
+*.pdf    binary
+*.png    binary
+*.eps    binary

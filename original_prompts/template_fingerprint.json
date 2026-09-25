@@ -1,0 +1,60 @@
+{
+  "source": "src/run_experiment.py (post B/D isolation fix)",
+  "note": "These hashes identify the fixed prompt templates. The formal A/C/D run and the corrected B run used these same templates; the only difference across runs was the rule_ids variable passed into B (old B wrongly received D's mapping; corrected B receives []).",
+  "constants": {
+    "FINAL_SYSTEM_TEMPLATE": "1fbfbedfb5d01a3f9bb8c6ae75a75322ec10784bcefc3942c52768ac73a36d6f",
+    "OUTPUT_SCHEMA_PROMPT": "d9ce65d2fd580c41f80fcfccc954266c9b050ebcf9288f5e94446c6c43fcb56e",
+    "ROLE_OUTPUT_PROMPT": "e1085d364aa69044f818a5f25e1c756fc3aa769f50b51308b5119c074edb0eb7",
+    "ROLE_DEFINITIONS_Entity": "2e1586a299932b2c2200758ed2576d18be4d98da2c029770becc8f2674863a29",
+    "ROLE_DEFINITIONS_Flow": "3c7b9c423aa231646ee23d3aa84ce8cb790ff5a151ef301aef3800567e0e8385",
+    "ROLE_DEFINITIONS_Anomaly": "7dd53d79827db6cb72277f1f1a4d548b543efca52fe43fa80a9e2051c30a379d",
+    "RULES_json": "baa6e05abec636c9d701f0d4eeed75a76c8909ff90cc941635b82044a4cd7d8e",
+    "ROLE_RULE_MAP_json": "23a766042e230e56a057d50d974c4d4b09aba8d2824be1ae21728d97e59efdaf"
+  },
+  "assembled_with_placeholders": {
+    "A_system": "0324572661831aa4a60cef1a4b55cf9002041b62df28fb24b5d730b4514a3e2b",
+    "A_user": "1f324e96fdd25887e4b7b0fa636171b04ddb9ac7e5191c194cf183b4a6625278",
+    "C_system": "36f031bec8f42b7a03e99e923ff30b2b9887c4aa8efd43fbee5ac5b08c86e5ed",
+    "C_user": "1f324e96fdd25887e4b7b0fa636171b04ddb9ac7e5191c194cf183b4a6625278",
+    "decision_system": "0324572661831aa4a60cef1a4b55cf9002041b62df28fb24b5d730b4514a3e2b",
+    "decision_user": "6f51e6bb2f91e94eac8b2c92e14a004c1856c9071d74df4b85b015850cb65d52",
+    "B_Entity_system": "7b0decd3eb63362cc0959a7a88cd5923ae48ffeea7f6586a8fa83592a5138c6e",
+    "B_Entity_user": "6fc1c6680cc64603135ba982c2d2db03c4c8ddaed66bb6ef27c60124e94913e2",
+    "B_Flow_system": "ccf32b0a88c8128c1e4ef0d81f48ab5189f4d3f04d01ae316239e743bddffb90",
+    "B_Flow_user": "6fc1c6680cc64603135ba982c2d2db03c4c8ddaed66bb6ef27c60124e94913e2",
+    "B_Anomaly_system": "17e507b085a73698d4c1644940f2b04fad5a6f0881af07133252424fce1be80b",
+    "B_Anomaly_user": "6fc1c6680cc64603135ba982c2d2db03c4c8ddaed66bb6ef27c60124e94913e2",
+    "D_Entity_system": "03680c54e414b04907956e246108d3f89f9a5317563881d2a302ec867e253ae4",
+    "D_Entity_user": "6fc1c6680cc64603135ba982c2d2db03c4c8ddaed66bb6ef27c60124e94913e2",
+    "D_Flow_system": "f5e080a9f729422fb6bc59e8326fa028ae44eb32169ad67beb91608746c9c972",
+    "D_Flow_user": "6fc1c6680cc64603135ba982c2d2db03c4c8ddaed66bb6ef27c60124e94913e2",
+    "D_Anomaly_system": "aea7d4f07e1adfced95097a88f2b41e2535be3da0d51b4574152e76396de117f",
+    "D_Anomaly_user": "6fc1c6680cc64603135ba982c2d2db03c4c8ddaed66bb6ef27c60124e94913e2"
+  },
+  "rule_ids_by_condition": {
+    "A": "none (single prompt, no roles)",
+    "B": {
+      "Entity": [],
+      "Flow": [],
+      "Anomaly": []
+    },
+    "C": [
+      "rule_1_email_anonymity",
+      "rule_2_frequency_burst",
+      "rule_3_category_crossborder",
+      "rule_4_distance_mismatch"
+    ],
+    "D": {
+      "Entity": [
+        "rule_1_email_anonymity"
+      ],
+      "Flow": [
+        "rule_3_category_crossborder"
+      ],
+      "Anomaly": [
+        "rule_2_frequency_burst",
+        "rule_4_distance_mismatch"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# Secrets — never commit
+config.json
+**/config.json
+config.deepseek.json
+config.*.json
+!config.example.json
+*.key
+*.pem
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Raw dataset (IEEE-CIS, ~1.3 GB) — Kaggle competition data with its own
+# licence. Download separately; see data/README.md
+data/raw/
+raw_data/
+
+# Generated output
+results/recomputed/
+*.bak
+*.tmp
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,9 @@
+# This project has NO third-party dependencies.
+#
+# The experiment harness (src/) and the analysis code (work/, recompute.py)
+# use only the Python standard library, including the API client, which speaks
+# the OpenAI-compatible /chat/completions protocol via urllib.
+#
+# Requires Python 3.8 or later.
+#
+# Nothing to install.
