@@ -1,11 +1,12 @@
 # Per-instance response logs
 
 One JSON object per line; one file per condition per model. Every file here is
-a **complete** run: 400 instances, all with `status: "success"` — six conditions
-were added on 2026-09-21 (C-single-crisp on three models, C-neutral on two, and
-the path-equivalence probe) and are complete on the same terms. All figures
-reported in the manuscript can be regenerated from these files alone — run
-`python recompute.py` to check.
+a **complete** run: 400 scored instances (two `grok-4.3/` archives additionally
+retain `api_error` retry rows, discarded by the loader — see that section) — six
+conditions were added on 2026-09-21 (C-single-crisp on three models, C-neutral
+on two, and the path-equivalence probe) and are complete on the same terms.
+All figures reported in the manuscript can be regenerated from these files
+alone — run `python recompute.py` to check.
 
 ## `deepseek/` — primary model
 
@@ -100,6 +101,33 @@ and the 13/0 over-flagging test all come from `supp_C-R2only.jsonl`. The
 earlier run gives 0.6000, Δ = −0.0175, b/c = 4/11, p = 0.118, and the same
 one-directional over-flagging (15 flags the engine does not, 0 the other way);
 both runs are checked by `recompute.py`.
+
+## `grok-4.3/` — frontier reasoning model (xAI, via OpenRouter)
+
+The frontier model was added last, on the frozen prompts of the supplementary
+controls only (no main $2\times2$ conditions). Runs are dated 2026-09-24 and
+were served through OpenRouter (`x-ai/grok-4.3`).
+
+| File | Condition | Accuracy |
+|---|---|---|
+| `supp_C-sham.jsonl` | C-sham | 0.4850 |
+| `supp_C-crisp.jsonl` | C-crisp | 0.5700 |
+| `supp_C-R2only.jsonl` | C-R2only | 0.6150 |
+| `supp_C-single-crisp.jsonl` | C-single-crisp | 0.6175 |
+
+Two of these archives retain their raw retry rows: `supp_C-crisp.jsonl` has 418
+lines (400 successes + 18 `api_error` retries) and `supp_C-single-crisp.jsonl`
+has 404 (400 + 4). `recompute.py`'s loader keeps the successful attempt per
+instance, so every scored set is the standard 400.
+
+Highlights checked by `recompute.py`: the C-single-crisp run is
+verdict-for-verdict identical to the single-rule engine on all 400 instances
+(0.6175, 101 flags, zero discordant pairs); C-R2only differs from the engine on
+exactly one instance ($b/c = 0/1$ — the engine is right and the model is wrong
+on it), flags 102 records against the engine's 101, and the single excess flag
+is a record the engine does not flag; the sham contrast (C-crisp $0.5700$ vs
+C-sham $0.4850$, $b/c = 126/92$, $p = 0.025$) makes grok-4.3 one of the two
+models whose uncorrected $p$ falls below $0.05$ in Table 3.
 
 ## `variance/` — run-to-run consistency probe
 

@@ -14,7 +14,8 @@ authors:
   - family-names: "Lei"
     given-names: "Yuyang"
     affiliation: "School of Computer Science, Guangzhou College of Applied Science and Technology (Zhaoqing Campus), Dinghu District, Zhaoqing, Guangdong, China"
-    email: "yuyeung.lei@gmail.com"
+    email: "leiyuyang@gzasc.edu.cn"
+    orcid: "https://orcid.org/0009-0004-0074-2722"
 type: software
 license: MIT
 repository-code: "https://github.com/whyrivercrush/llm-rule-execution-fraud"

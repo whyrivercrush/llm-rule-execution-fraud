@@ -531,13 +531,28 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         for name, fn in spec.items():
             extra_recs[model][name] = load_log(LOGS / model / fn)
 
+    # ------------------------------------------------- grok-4.3 (frontier model)
+    # Added on the frozen prompts of the supplementary controls. The C-crisp and
+    # C-single-crisp archives keep their api_error retry rows; load_log keeps
+    # the successful attempt per instance, so the scored set is the standard 400.
+    gk = {
+        "C-sham":         load_log(LOGS / "grok-4.3" / "supp_C-sham.jsonl"),
+        "C-crisp":        load_log(LOGS / "grok-4.3" / "supp_C-crisp.jsonl"),
+        "C-R2only":       load_log(LOGS / "grok-4.3" / "supp_C-R2only.jsonl"),
+        "C-single-crisp": load_log(LOGS / "grok-4.3" / "supp_C-single-crisp.jsonl"),
+    }
+    gk_metrics = {c: metrics(*predictions(gk[c])) for c in gk}
+    computed["grok_43"] = {c: gk_metrics[c]["accuracy"] for c in gk}
+
     WANT = {
         ("glm-4.5-air", "C-sham"): 0.4925, ("glm-4.5-air", "C-crisp"): 0.5600,
         ("qwen3-max",   "C-sham"): 0.5100, ("qwen3-max",   "C-crisp"): 0.6025,
         ("kimi-k2.6",   "C-sham"): 0.5300, ("kimi-k2.6",   "C-crisp"): 0.5675,
+        ("grok-4.3",    "C-sham"): 0.4850, ("grok-4.3",    "C-crisp"): 0.5700,
     }
     for (model, cond), want in WANT.items():
-        acc = metrics(*predictions(extra_recs[model][cond]))["accuracy"]
+        recs = extra_recs[model][cond] if model in extra_recs else gk[cond]
+        acc = metrics(*predictions(recs))["accuracy"]
         C.check("Table 3  %s %s accuracy" % (model, cond), acc, want)
 
     C.check("Result 1  glm-4.5-air C-R2only accuracy",
@@ -553,6 +568,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                           extra_recs["qwen3-max"]["C-sham"],         +0.0925, 0.0126),
         "kimi-k2.6":     (extra_recs["kimi-k2.6"]["C-crisp"],
                           extra_recs["kimi-k2.6"]["C-sham"],         +0.0375, 0.357),
+        "grok-4.3":      (gk["C-crisp"], gk["C-sham"],              +0.0850, 0.025),
     }
     for model, (rc, rs, want_d, want_p) in CRISP_SHAM.items():
         al = aligned(rc, rs)
@@ -580,6 +596,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                           0.6025, +0.0375, 0.184, -0.0150, 0.5258),
         "kimi-k2.6":     (extra_recs["kimi-k2.6"]["C-crisp"],
                           0.5675, +0.0025, 1.000, -0.0500, 0.1105),
+        "grok-4.3":      (gk["C-crisp"],
+                          0.5700, +0.0050, 0.860, -0.0475, 0.101),
     }
     for model, (recs, w_acc, w_dor, w_por, w_dr2, w_pr2) in SI_ENGINE.items():
         tids = [t for t in recs if t in ENG_R2 and recs[t].get("is_fraud") in (0, 1)]
@@ -705,6 +723,63 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     C.check("Run-to-run disclosure  glm-5.3-flash C-R2only prior-run vs E_R2  p",
             f53_prior_r["p"], 0.1185, tol=0.002)
     computed["glm_53_flash_C_R2only"] = {"reported": f53_r2, "prior_run": f53_prior_r}
+
+    # ------------------------------------------- grok-4.3  Result 1 and Sec 4.1
+    # C-R2only versus the single-rule engine: one discordant instance overall,
+    # which is an instance the engine classifies correctly and the model does
+    # not (b/c = 0/1); on flag decisions the single excess is the model flagging
+    # a record the engine does not (13-style over-flagging in miniature).
+    gk_r2 = mc_vs_engine(gk["C-R2only"], eng_r2)
+    C.check("Result 1  grok-4.3 C-R2only vs E_R2  delta", gk_r2["delta"], -0.0025)
+    C.check("Result 1  grok-4.3 C-R2only vs E_R2  b (model correct, engine wrong)",
+            float(gk_r2["b"]), 0)
+    C.check("Result 1  grok-4.3 C-R2only vs E_R2  c (engine correct, model wrong)",
+            float(gk_r2["c"]), 1)
+    C.check("Result 1  grok-4.3 C-R2only vs E_R2  p", gk_r2["p"], 1.000, tol=0.002)
+
+    gk_fr = flag_mcnemar(gk["C-R2only"], eng_r2)
+    C.check("Sec 4.1  grok-4.3 C-R2only flags", gk_fr["model_flags"], 102)
+    C.check("Sec 4.1  grok-4.3 C-R2only over-flag discordance (model flags, engine does not)",
+            gk_fr["model_only"], 1)
+    C.check("Sec 4.1  grok-4.3 C-R2only under-flag discordance (engine flags, model does not)",
+            gk_fr["engine_only"], 0)
+    C.check("Sec 4.1  grok-4.3 C-R2only flag-decision McNemar p",
+            gk_fr["p"], 1.000, tol=0.002)
+
+    # C-single-crisp: verdict-for-verdict identity with the engine (SI table).
+    gk_sc = mc_vs_engine(gk["C-single-crisp"], eng_r2)
+    C.check("SI Table  grok-4.3 C-single-crisp vs E_R2  delta", gk_sc["delta"], 0.0000)
+    C.check("SI Table  grok-4.3 C-single-crisp  discordant b", float(gk_sc["b"]), 0)
+    C.check("SI Table  grok-4.3 C-single-crisp  discordant c", float(gk_sc["c"]), 0)
+    gk_sc_fr = flag_mcnemar(gk["C-single-crisp"], eng_r2)
+    C.check("SI Table  grok-4.3 C-single-crisp flags", gk_sc_fr["model_flags"], 101)
+    C.check("SI Table  grok-4.3 C-single-crisp  flag discordance (b + c)",
+            float(gk_sc_fr["model_only"] + gk_sc_fr["engine_only"]), 0)
+
+    # Table 3 grok row: b/c of the crisp-sham contrast and the paired bootstrap
+    # CI of the per-instance difference quoted in the main text.
+    al_gk = aligned(gk["C-crisp"], gk["C-sham"])
+    if al_gk is None:
+        C.check("Table 3  grok-4.3 crisp-sham b/c", None, 126.0)
+    else:
+        yt_gk, pc_gk, ps_gk = al_gk
+        cc_gk = [t == p for t, p in zip(yt_gk, pc_gk)]
+        cs_gk = [t == p for t, p in zip(yt_gk, ps_gk)]
+        r_gk = mcnemar_exact(cc_gk, cs_gk)
+        C.check("Table 3  grok-4.3 crisp minus sham  b (crisp correct, sham wrong)",
+                float(r_gk["b"]), 126)
+        C.check("Table 3  grok-4.3 crisp minus sham  c (sham correct, crisp wrong)",
+                float(r_gk["c"]), 92)
+        d_gk_simple = [int(a) - int(b) for a, b in zip(cc_gk, cs_gk)]
+        rng_gk = random.Random(BOOTSTRAP_SEED)
+        boots_gk = sorted(sum(d_gk_simple[rng_gk.randrange(len(d_gk_simple))]
+                              for _ in range(len(d_gk_simple))) / len(d_gk_simple)
+                          for _ in range(BOOTSTRAP_N))
+        C.check("Table 3  grok-4.3 crisp-sham  CI low",
+                boots_gk[int(round(0.025 * (BOOTSTRAP_N - 1)))], 0.0150, tol=0.0065)
+        C.check("Table 3  grok-4.3 crisp-sham  CI high",
+                boots_gk[int(round(0.975 * (BOOTSTRAP_N - 1)))], 0.1550, tol=0.0065)
+
 
     r = mc_vs_engine(ctl["C-crisp__recs"], eng_or)
     C.check("Result 4  C-crisp vs E_OR  delta", r["delta"], -0.0250)
@@ -892,6 +967,28 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     C.check("Sec 4.1  simple effect, deepseek", sum(d_ds) / len(d_ds), -0.0325)
     C.check("Sec 4.1  simple effect, glm-5.3-flash", sum(d_gl) / len(d_gl), 0.0650)
     C.flag("Sec 4.1  interaction CI excludes zero", lo_i > 0)
+
+    # grok-4.3 interaction against deepseek (frontier-model row of the same
+    # paragraph). Both the point estimate and the 95% CI are checked against
+    # the corrected manuscript values; the interval the pre-correction draft
+    # quoted ([+0.0300, +0.2625]) came from an unarchived inline script that
+    # double-subtracted the deepseek mean, and is superseded.
+    ids_gk, d_gk_int = dd(gk["C-crisp"], gk["C-sham"])
+    gl_gk = dict(zip(ids_gk, d_gk_int))
+    D_gk = [gl_gk[t] - d for t, d in zip(ids_ds, d_ds) if t in gl_gk]
+    obs_gk = sum(D_gk) / len(D_gk)
+    rng_gk_i = random.Random(BOOTSTRAP_SEED)
+    boots_gk_i = sorted(sum(D_gk[rng_gk_i.randrange(len(D_gk))]
+                            for _ in range(len(D_gk))) / len(D_gk)
+                        for _ in range(BOOTSTRAP_N))
+    lo_gk = boots_gk_i[int(round(0.025 * (BOOTSTRAP_N - 1)))]
+    hi_gk = boots_gk_i[int(round(0.975 * (BOOTSTRAP_N - 1)))]
+    computed["interaction_grok"] = {"n": len(D_gk), "interaction": obs_gk,
+                                    "lo": lo_gk, "hi": hi_gk}
+    C.check("Sec 4.1  sham->crisp interaction, grok-4.3", obs_gk, 0.1175)
+    C.check("Sec 4.1  grok-4.3 interaction CI low", lo_gk, 0.0550, tol=0.0065)
+    C.check("Sec 4.1  grok-4.3 interaction CI high", hi_gk, 0.1775, tol=0.0065)
+    C.flag("Sec 4.1  grok-4.3 interaction CI excludes zero", lo_gk > 0)
 
     # ------------------------------------------------------- entity-level analyses
     if clusters is not None:
